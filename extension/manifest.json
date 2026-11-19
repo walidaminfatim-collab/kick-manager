@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Kick Manager",
+  "version": "1.0.0",
+  "description": "Premium manager for your Kick accounts, streamers and message templates.",
+  "action": {
+    "default_title": "Kick Manager",
+    "default_popup": "popup/index.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "options_page": "pages/settings.html",
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

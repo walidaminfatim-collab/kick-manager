@@ -1,0 +1,15 @@
+{
+  "name": "kick-manager-discord-bot",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy-commands": "node src/deploy-commands.js"
+  },
+  "engines": { "node": ">=18.17" },
+  "dependencies": {
+    "discord.js": "^14.16.0",
+    "dotenv": "^16.4.5"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "kick-manager",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kick Manager: Chrome extension + Node.js API + Discord license bot",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix discord-bot install",
+    "start:backend": "npm --prefix backend start",
+    "dev:backend": "npm --prefix backend run dev",
+    "start:bot": "npm --prefix discord-bot start",
+    "deploy:commands": "npm --prefix discord-bot run deploy-commands",
+    "icons": "node scripts/make-icons.js",
+    "check": "node scripts/check.js",
+    "test": "node --test backend/test/unit.test.js"
+  },
+  "engines": { "node": ">=18.17" }
+}

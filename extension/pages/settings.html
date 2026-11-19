@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kick Manager · Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><img src="../assets/icons/icon48.png" alt=""><span>KICK <b>MANAGER</b></span></div>
+      <h1 data-i18n="settings_title">Settings</h1>
+    </header>
+
+    <section class="card">
+      <h2 data-i18n="language">Language</h2>
+      <select id="lang"><option value="en">English</option><option value="ar">العربية (RTL)</option></select>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="backend_status">Backend connection</h2>
+      <div class="row"><span id="backend-badge" class="badge">…</span><span id="backend-detail" class="muted"></span></div>
+      <div class="muted small" id="backend-url" dir="ltr"></div>
+      <button id="recheck" class="btn ghost" data-i18n="refresh">Refresh</button>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="license">License</h2>
+      <div id="license-info" class="muted"></div>
+      <button id="deactivate" class="btn danger" data-i18n="deactivate">Remove license from this browser</button>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="account_prefs">Account preferences</h2>
+      <label class="row between"><span data-i18n="notifications">Live notifications</span><span class="switch"><input id="notif" type="checkbox"><span></span></span></label>
+      <div class="field"><label data-i18n="default_account">Default account</label><select id="default-account"></select></div>
+    </section>
+    <div id="toast"></div>
+  </div>
+  <script src="../config.js"></script>
+  <script src="../i18n.js"></script>
+  <script src="../api.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>
